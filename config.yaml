@@ -1,0 +1,24 @@
+# Draft settings; agree on the protocol before comparing performance.
+data:
+  start: "2003-12-01"  # Price history for warm-up before the 2005 research start.
+  end_exclusive: "2026-10-21"  # Fixed cutoff; October is excluded from signals.
+  universe_file: "data/universe.example.csv"  # Example tickers; replace with the research universe.
+  universe_description: "Ten illustrative tickers; not the S&P 500 research universe"
+  universe_source: "Manually selected example"
+  universe_as_of: "2026-10-20"
+research:
+  start: "2005-01-01"
+  development_end: "2015-12-31"
+  evaluation_start: "2016-01-01"
+strategy:
+  signal: "12-1"
+  decile_fraction: 0.1
+  long_exposure: 0.5
+  short_exposure: 0.5
+  rebalance: "monthly"
+  volatility_window_days: 126
+  annualization_days: 252
+  target_volatility: 0.12
+  min_multiplier: 0.5
+  max_multiplier: 2.0
+  cost_bps_per_dollar_traded: 10
